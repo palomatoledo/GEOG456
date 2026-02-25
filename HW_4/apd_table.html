@@ -58,31 +58,17 @@ tr:nth-child(even) {
       myNewCell1.innerHTML = e.properties.beat;
       myNewCell2.innerHTML = e.properties.incident_count_1;
 
-    // myNewCell2.innerHTML = Math.round([i].generation_gwh_2019 *100)/100;
-    // myNewCell2.innerHTML = checkType(data[i].generation_gwh_2019);
-    // myNewCell2.innerHTML = parseFloat(data[i].generation_gwh_2019).toFixed(2);
-
-
-
     if(myNewCell2.innerHTML > 100 ){ myNewCell1.style.backgroundColor = '#da1e37'}
     if(myNewCell2.innerHTML <= 100 ){ myNewCell1.style.backgroundColor = '#84a98c'}
 
     if(myNewCell2.innerHTML > 100 ){ myNewCell2.style.backgroundColor = '#da1e37'}
     if(myNewCell2.innerHTML <= 100 ){ myNewCell2.style.backgroundColor = '#84a98c'}
-    
-    // Color method using a function 
-    // myNewCell2.style.backgroundColor = getBackgroundColor(data[i].generation_gwh_2019)
-
-    //Color method using class
-    // myNewCell2.className = getClassName(data[i].generation_gwh_2019)
 
     myNewRow.append(myNewCell1);
     myNewRow.append(myNewCell2);
     x.append(myNewRow);
 
   } // The loop ends 
- 
-
 
   function checkType(value) {
     if (typeof value === "string") {
@@ -92,14 +78,6 @@ tr:nth-child(even) {
     } else {
         return "Other";
     }
-}
-
-function getBackgroundColor(d){
-  return d > 100 ? 'red' : 'green';
-}
-
-function getClassName(d){
-  return d > 39.7 ? 'high' : 'low';
 }
 
 </script>
